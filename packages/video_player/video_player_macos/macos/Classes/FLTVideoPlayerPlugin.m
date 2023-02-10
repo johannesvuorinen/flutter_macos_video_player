@@ -177,7 +177,9 @@ static inline CGFloat radiansToDegrees(CGFloat radians) {
         _lastValidFrame = pixelBuffer;
       }
     }
-    [_frameUpdater notifyFrameAvailable];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [_frameUpdater notifyFrameAvailable];
+    });
   }
 }
 
