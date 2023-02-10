@@ -17,4 +17,5 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
+  video_player_macos: ^2.5.1
   video_player_platform_interface: ">=5.1.1 <7.0.0"
